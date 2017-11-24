@@ -20,4 +20,8 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.0.0'
 
   s.add_runtime_dependency('middleman-core', ['>= 4.2.1'])
+
+  s.add_development_dependency('rake')
+  s.add_development_dependency('cucumber')
+  s.add_development_dependency('rspec')
 end

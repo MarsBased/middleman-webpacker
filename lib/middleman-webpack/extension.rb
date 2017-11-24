@@ -4,9 +4,9 @@ require 'middleman-webpack/helpers'
 module MiddlemanWebpack
   class Extension < ::Middleman::Extension
 
-    DEVELOPMENT_WEBPACK_CMD = './node_modules/webpack/bin/webpack.js' \
+    DEVELOPMENT_WEBPACK_CMD = './node_modules/webpack/bin/webpack.js ' \
       '--watch -d --progress --color --config config/webpack/development.js'
-    PRODUCTION_WEBPACK_CMD = 'NODE_ENV=production ./node_modules/webpack/bin/webpack.js' \
+    PRODUCTION_WEBPACK_CMD = 'NODE_ENV=production ./node_modules/webpack/bin/webpack.js ' \
       '--bail -p --config config/webpack/production.js'
 
     option :dist_path, 'dist', 'Output directory configured in Webpack'

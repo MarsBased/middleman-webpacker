@@ -1,4 +1,4 @@
-module MiddlemanWebpack
+module MiddlemanWebpacker
   class FileLoader
     class NotFoundError < StandardError; end
     class FileLoaderError < StandardError; end

@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'middleman-webpack/version'
+require 'middleman-webpacker/version'
 
 Gem::Specification.new do |s|
-  s.name                  = 'middleman-webpack'
-  s.version               = MiddlemanWebpack::VERSION
+  s.name                  = 'middleman-webpacker'
+  s.version               = MiddlemanWebpacker::VERSION
   s.platform              = Gem::Platform::RUBY
   s.authors               = [ 'MarsBased' ]
   s.email                 = [ 'hello@marsbased.com' ]
-  s.homepage              = 'https://github.com/marsbased/middleman-webpack'
+  s.homepage              = 'https://github.com/marsbased/middleman-webpacker'
   s.summary               = %q{ Extension to use Middleman with Webpack }
   s.description           = %q{ Extension to use Middleman with Webpack }
   s.license               = 'MIT'

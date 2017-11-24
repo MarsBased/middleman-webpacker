@@ -1,7 +1,7 @@
 require 'middleman-core'
-require 'middleman-webpack/helpers'
+require 'middleman-webpacker/helpers'
 
-module MiddlemanWebpack
+module MiddlemanWebpacker
   class Extension < ::Middleman::Extension
 
     DEVELOPMENT_WEBPACK_CMD = './node_modules/webpack/bin/webpack.js ' \
@@ -14,7 +14,7 @@ module MiddlemanWebpack
     option :javascripts_base_path, '', 'Base path where javascripts will be placed inside dist_path'
     option :images_base_path, 'img/', 'Base path where images will be placed inside dist_path'
 
-    self.defined_helpers = [MiddlemanWebpack::Helpers]
+    self.defined_helpers = [MiddlemanWebpacker::Helpers]
 
     def initialize(app, options_hash = {}, &block)
       super

@@ -1,6 +1,8 @@
-# Middleman Webpack Extension
+# Middleman Webpacker Extension
 
 This extensions allows to use Webpack in [Middleman](https://middlemanapp.com/) (>= 4) applications through the external pipeline feature introduced in Middleman 4.
+
+It's heavily inspired in the Webpacker gem for Rails.
 
 ## Dependencies
 
@@ -18,7 +20,7 @@ middleman init MY_PROJECT
 If you already have a Middleman project: Add this to the Gemfile and run `bundle install`
 
 ```
-gem 'middleman-webpack'
+gem 'middleman-webpacker'
 ```
 
 ## Configuration

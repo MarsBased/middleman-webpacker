@@ -1,6 +1,6 @@
-require 'middleman-webpack/file_loader'
+require 'middleman-webpacker/file_loader'
 
-module MiddlemanWebpack
+module MiddlemanWebpacker
   class Manifest < FileLoader
 
     class_attribute :file_path
@@ -9,10 +9,10 @@ module MiddlemanWebpack
       load
 
       unless instance
-        raise MiddlemanWebpack::FileLoader::FileLoaderError.new('load must be called first')
+        raise MiddlemanWebpacker::FileLoader::FileLoaderError.new('load must be called first')
       end
 
-      instance.data[name.to_s] or raise(MiddlemanWebpack::FileLoader::NotFoundError.new(
+      instance.data[name.to_s] or raise(MiddlemanWebpacker::FileLoader::NotFoundError.new(
         "Can't find #{name} in #{file_path}. Is webpack still compiling?"))
     end
 

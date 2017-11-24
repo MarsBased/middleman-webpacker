@@ -1,6 +1,6 @@
-require 'middleman-webpack/manifest'
+require 'middleman-webpacker/manifest'
 
-module MiddlemanWebpack
+module MiddlemanWebpacker
   module Helpers
 
     def stylesheet_pack_tag(name, **options)

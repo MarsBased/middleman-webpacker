@@ -51,6 +51,27 @@ Base path where javascripts will be placed inside dist_path.
 
 Base path where images will be placed inside dist_path.
 
+### Manifest
+
+In order for the plugin to work, you need to add the `ManifestPlugin` to the Webpack config.
+
+Add the `webpack-manifest-plugin` package to `package.json`. Then in the Webpack config file.
+
+```
+// Require the plugin at the top
+const ManifestPlugin = require('webpack-manifest-plugin');
+
+...
+
+// Add the plugin to the plugins section
+plugins: [
+  new ManifestPlugin({
+    publicPath: '/',
+    writeToFileEmit: true
+  })
+]
+```
+
 ## Usage
 
 When activating the extension, Webpack will be used with the provided configuration. The extension is configured to have Webpack take care of all assets: Javascript, stylesheets, images and fonts.

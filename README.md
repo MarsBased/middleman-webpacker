@@ -35,20 +35,24 @@ Then you need to provide your Webpack configuration inside the `config` folder. 
 
 The extension provides the following configuration options:
 
-`dist_path` (default: 'dist')
+* `development_webpack_cmd`
+(default: './node_modules/webpack/bin/webpack.js --watch -d --progress --color --config config/webpack/development.js')\
+command to run webpack in development mode
 
+* `production_webpack_cmd`
+(default: 'NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail --config config/webpack/production.js')\
+command to run webpack in production mode
+
+* `dist_path` (default: 'dist')\
 Output directory configured in Webpack.
 
-`stylesheets_base_path` (default: '')
-
+* `stylesheets_base_path` (default: '')\
 Base path where stylesheets will be placed inside dist_path.
 
-`javascripts_base_path` (default: '')
-
+* `javascripts_base_path` (default: '')\
 Base path where javascripts will be placed inside dist_path.
 
-`images_base_path` (default: 'img/')
-
+* `images_base_path` (default: 'img/')\
 Base path where images will be placed inside dist_path.
 
 ### Manifest
@@ -80,7 +84,7 @@ This means that all of these assets need to be covered in your Webpack configura
 
 In order to be able to use the assets compiled by Webpack from the HTML you can use the following helpers:
 * `javascript_pack_tag` which replaces `javascript_include_tag`
-* `stylesheet_pack_tag` which replaces `stylesheet_link_tag` 
+* `stylesheet_pack_tag` which replaces `stylesheet_link_tag`
 * `image_pack_tag` which replaces `image_tag`
 * `asset_pack_path` which replaces `asset_path`
 

@@ -19,6 +19,10 @@ module MiddlemanWebpacker
       asset_path(Manifest.lookup(name), **options)
     end
 
+    def manifest_resource_path(name)
+      Manifest.lookup(name)
+    end
+
     private
 
     def extension_options
